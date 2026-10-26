@@ -1,4 +1,4 @@
-ARG NODE_IMAGE=node:22-bookworm-slim
+ARG NODE_IMAGE=node:22.23.4-bookworm-slim
 FROM ${NODE_IMAGE}
 ARG CODEX_VERSION=0.154.0
 WORKDIR /consumer
