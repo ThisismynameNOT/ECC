@@ -1,5 +1,5 @@
-ARG NODE_IMAGE=node:22.23.4-bookworm-slim
-ARG OS_IMAGE=node:22.23.4-bookworm-slim
+ARG NODE_IMAGE=node:22.23.4-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d
+ARG OS_IMAGE=node:22.23.4-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d
 
 FROM ${NODE_IMAGE} AS node-runtime
 FROM ${OS_IMAGE}
