@@ -26,7 +26,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: ['18.x', '20.x', '22.x']
+        node: ['22.23.4', '24.22.1']
         pm: [npm, pnpm, yarn, bun]
         exclude:
           # Bun has limited Windows support
@@ -125,7 +125,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20.x'
+          node-version: '22.23.4'
 
       - name: Install dependencies
         run: npm ci --ignore-scripts
@@ -162,7 +162,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20.x'
+          node-version: '22.23.4'
 
       - name: Download exact installer artifact
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
@@ -190,7 +190,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20.x'
+          node-version: '22.23.4'
 
       - name: Install validation dependencies
         run: npm ci --ignore-scripts
@@ -253,7 +253,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20.x'
+          node-version: '22.23.4'
 
       # Rebuild runs frontmatter validation and the pi/core safety checks
       # (no callable endpoints, no runtime downloads, no secrets, no absolute
@@ -324,7 +324,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20.x'
+          node-version: '22.23.4'
 
       - name: Install audit dependencies
         run: npm ci --ignore-scripts
@@ -353,7 +353,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20.x'
+          node-version: '22.23.4'
 
       - name: Install dependencies
         run: npm ci --ignore-scripts
@@ -382,7 +382,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: '20.x'
+          node-version: '22.23.4'
 
       - name: Install dependencies
         run: npm ci --ignore-scripts
