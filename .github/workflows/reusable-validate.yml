@@ -7,7 +7,7 @@ on:
         description: 'Node.js version'
         required: false
         type: string
-        default: '20.x'
+        default: '22.23.4'
 
 jobs:
   validate:
