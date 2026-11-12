@@ -1,7 +1,7 @@
 {
   "name": "ecc",
   "version": "2.2.2",
-  "description": "Harness-native ECC plugin for engineering teams - 68 agents, 293 skills, 94 legacy command shims, reusable hooks, rules, MCP conventions, and operator workflows for Claude Code plus adjacent agent harnesses",
+  "description": "Lean personal fork for Codex and Claude: five core engineering skill adapters; full catalog retained but not automatically exposed.",
   "author": {
     "name": "Affaan Mustafa",
     "url": "https://x.com/affaanmustafa"
@@ -38,7 +38,7 @@
   },
   "mcpServers": {},
   "skills": [
-    "./skills/"
+    "./core-skills/"
   ],
   "commands": [
     "./commands/"

@@ -13,8 +13,7 @@ hooks/codex-hooks.json — Codex-compatible lifecycle hook projection
 
 ## What This Provides
 
-- **281 skills** from `./skills/` — reusable Codex workflows for TDD, security,
-  code review, architecture, and more
+- **5 curated skill adapters** from `./core-skills/` — frontend patterns, E2E testing, security review, TDD, and verification. The full `skills/` directory remains as a reference library.
 - **1 default MCP server** — Chrome DevTools; retired connectors remain opt-in
 - **Codex lifecycle hooks** — synchronous command hooks on supported events,
   with explicit review and trust in `/hooks`
@@ -73,8 +72,7 @@ Codex records trust against each definition's hash, so changed hooks require
 review again. Use `/plugins` for plugin enablement and `/hooks` for hook trust;
 these are separate controls.
 
-Once the cached skills are available, invoke `$configure-ecc` inside Codex for
-ECC's guided configuration. Installing the plugin again is idempotent and does
+Only the five core skills are advertised by this personal fork's native plugin. The full `$configure-ecc` helper is not part of the active core profile; enable the original plugin profile if you intentionally need its guided configuration. Installing the plugin again is idempotent and does
 not create a second scope or duplicate hook registration.
 
 ## Native plugin versus legacy managed sync
@@ -113,9 +111,12 @@ The former defaults (`github`, `context7`, `exa`, `memory`, `playwright`, `seque
 
 ## Notes
 
-- The `skills/` directory at the repo root is the source of truth for the Codex
-  plugin package; do not duplicate skill content inside `.codex-plugin/`.
+- The `skills/` directory remains the canonical source. `core-skills/` contains only discovery adapters that load that source from the plugin root. Do not duplicate full skill content inside `.codex-plugin/`.
 - ECC is moving to a skills-first workflow surface. Legacy `commands/` remain for
   compatibility on harnesses that still expect slash-entry shims.
 - MCP server credentials are inherited from the launching environment (env vars)
 - This manifest does **not** override `~/.codex/config.toml` settings
+
+## Personal fork core profile
+
+This fork's manifests expose only the five adapters in `core-skills/`. To get this profile, install from the personal fork (`ThisismynameNOT/ECC`), **not** from `affaan-m/ECC`; the upstream marketplace entry continues to advertise its full catalog. Original manifests are recoverable from `backup/skills-before-cleanup-20261113`. No installation on a Windows computer is changed by editing this GitHub repository.

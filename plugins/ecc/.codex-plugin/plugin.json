@@ -20,11 +20,11 @@
     "workflow",
     "automation"
   ],
-  "skills": "../../skills/",
+  "skills": "../../core-skills/",
   "mcpServers": "../../.mcp.json",
   "interface": {
     "displayName": "ECC",
-    "shortDescription": "249 ECC skills plus MCP configs for TDD, security, code review, and autonomous development.",
+    "shortDescription": "Five curated ECC engineering skills",
     "longDescription": "ECC is a harness-native operator system for Codex and adjacent agent harnesses. It packages reusable skills, MCP configs, TDD workflows, security scanning, code review, architecture decisions, operator workflows, and release gates in one installable plugin.",
     "developerName": "Affaan Mustafa",
     "category": "Coding",
